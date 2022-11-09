@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 
 public class Graph {
@@ -30,8 +31,35 @@ public class Graph {
 		}
 	}
 	
+	/*
+		PRIM-MINIMUM-SPANNING-TREE(G, w, r) // graph G, weight function w, source vertex r
+			for each vertex u in G // initialization step: null parents and infinite keys
+			   u.key = ∞
+			   u.p = NULL
+			r.key = 0
+			Let Q be a new priority queue containing all vertices V of G
+			
+			while Q is not empty
+			   u = EXTRACT-MIN(Q)
+			   for each vertex v adjacent to u
+			      if v is still stored in Q and w(u, v) < v.key // we can get to it cheaper
+			         v.p = u // (u, v) is cheapest edge known so far to connect v to the MST
+			         DECREASE-KEY(Q, v, w(u,v)) // key of v decreased to edge weight (u, v) 
+	
+	*/
 	public void calculateMST() {
-		// Your code here:
+		// Initialization phase:
+		for (PrimNode node : this.nodes) {
+			node.key = Integer.MAX_VALUE; // infinity
+			node.p = null;
+		}
+		PrimNode source = this.nodes.get(0);
+		source.key = 0;
+		
+		PriorityQueue<PrimNode> queue = new PriorityQueue<PrimNode>();
+		for (PrimNode node : this.nodes) {
+			queue.add(node);
+		}
 	}
 	
 	

@@ -16,12 +16,12 @@ public class PrimTester {
 		*/
 	
 		Integer[][] matrix = {
-			{null, 8, null, 10, null, null},	// A
-			{8, null, 14, 12, null, null},	// B
-			{null, 14, null, 15, 13, null},	// C
-			{10, 12, 15, null, 12, 20},		// D
-			{null, null, 13, 12, null, 19},	// E
-			{null, null, null, 20, 19, null}	// F
+			{null, 8, null, 10, null, null},	// A (0)
+			{8, null, 14, 12, null, null},	// B (1)
+			{null, 14, null, 15, 13, null},	// C (2)
+			{10, 12, 15, null, 12, 20},		// D (3)
+			{null, null, 13, 12, null, 19},	// E (4)
+			{null, null, null, 20, 19, null}	// F (5)
 		};	
 		
 		

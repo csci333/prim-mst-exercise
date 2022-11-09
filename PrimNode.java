@@ -1,4 +1,5 @@
-public class PrimNode extends JSONNodeHelper {
+
+public class PrimNode extends JSONNodeHelper implements Comparable<PrimNode> {
 	public PrimNode p = null;
 	public Integer key = Integer.MAX_VALUE;
 	public Integer id;
@@ -29,5 +30,10 @@ public class PrimNode extends JSONNodeHelper {
 			str += "--> (null)";
 		}
 		return str;
+	}
+
+	@Override
+	public int compareTo(PrimNode other) {
+		return this.key.compareTo(other.key);
 	}
 }
